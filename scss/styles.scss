@@ -1,0 +1,68 @@
+@import 'colors';
+@import 'fonts';
+@import 'header';
+
+
+@import 'home';
+
+
+html{
+    overflow-x: hidden;
+    &.opened{
+        overflow-y: hidden;
+    }
+}
+html *:not(.no-animated):not(.slick-track):not(.slick-slide),
+html *:not(.no-animated):not(.slick-track):not(.slick-slide)::after,
+html *:not(.no-animated):not(.slick-track):not(.slick-slide)::before {
+    transition: all .15s ease-out;
+}
+body{
+    background-color: $white;
+}
+.know-more{
+    display: inline-flexbox;
+    font-family: Space Grotesk;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $black;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}
+.tns-outer{
+    position: relative;
+    .tns-ovh{
+        z-index: 1;
+    }
+    .tns-nav{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: -40px;
+        z-index: 2;
+        height: 22px;
+        button{
+            padding: 0;
+            display: block;
+            height: 14px;
+            width: 14px;
+            background-color: $black;
+            border: none;
+            border-radius: 20px;
+            &.tns-nav-active{
+                height: 22px;
+                width: 22px;
+
+            }
+        }
+}
+}
