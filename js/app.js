@@ -18,6 +18,7 @@ onscroll = () => {
     window.scrollY > 0 ? header.classList.add('scrolldown') :  header.classList.remove('scrolldown') ;
 };
 onload = () =>{
+    window.scrollY > 0 ? header.classList.add('scrolldown') :  header.classList.remove('scrolldown') ;
     tns({
         container: '.user-reviews-gallery',
         items: 1,
@@ -37,7 +38,7 @@ onload = () =>{
         mouseDrag: true,
         arrowKeys: false,
     });
-    
+
     tns({
         container: '.app-stats-gallery',
         items: 1,

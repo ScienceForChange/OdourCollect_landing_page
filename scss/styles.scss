@@ -11,7 +11,10 @@
 html{
     overflow-x: hidden;
     &.opened{
-        overflow-y: hidden;
+        overflow-y: hidden;        
+        @include media-breakpoint-up(md){
+            overflow-y: unset;
+        }
     }
 }
 html *:not(.no-animated):not(.slick-track):not(.slick-slide),

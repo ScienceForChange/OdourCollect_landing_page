@@ -1,13 +1,15 @@
 section#main-home{
     height: max-content;
-    max-height:800px;
+    max-height:1050px;
     background-color: $orange;
-    margin-top: -91px;
     background-image: url('/assets/img/bg-main.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 136px;
+    @include media-breakpoint-up(md){
+        padding-top: 250px;
+    }
     .text{
         padding: 0 0 30px;
         flex: 2;
@@ -38,7 +40,7 @@ section#main-home{
         min-height: 50dvw;
         margin-right: -38px;
         @include media-breakpoint-up(sm){
-            max-width: 350px;
+            max-width: 450px;
             background-position: top center;
             background-size: 100%;
         }
