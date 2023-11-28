@@ -1,0 +1,20 @@
+.btn{
+    width: fit-content;
+    background-color: $black;
+    color: $white; 
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 2px solid $black;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: $black;
+        background-color: $violet-lighter;
+        border: 2px solid $violet-dark;
+    }
+}

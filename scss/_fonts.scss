@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .headline-l{
     font-family: Space Grotesk;
@@ -32,6 +33,13 @@
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.088px;
+    
+    @include media-breakpoint-up(md){
+        font-size: 40px;
+        line-height: 40px;
+        line-height: 136%;
+        font-weight: 700;
+    }
 }
 
 .title-l{
@@ -41,6 +49,12 @@
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.088px;
+    @include media-breakpoint-up(md){
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 57px;
+    }
 }
 
 .title-m{

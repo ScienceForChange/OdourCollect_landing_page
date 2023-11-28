@@ -1,4 +1,5 @@
 header{
+    z-index: 90;
     position: sticky;
     top: 0;
     padding: 18px 30px;
@@ -12,7 +13,7 @@ header{
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        z-index: 2;
+        z-index: 99;
     }
     #burger{
         position: relative;
@@ -21,7 +22,7 @@ header{
         width: 34px;
         background-color: transparent;
         padding: 8px 3px;
-        z-index: 2;
+        z-index: 99;
         &:hover{
             padding: 3px;
         }
@@ -57,7 +58,7 @@ header{
         }
     }
     nav{
-        z-index: 1;
+        z-index: 98;
         position: absolute;
         top: 0;
         left: 100dvw;
