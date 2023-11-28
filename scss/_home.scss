@@ -13,6 +13,7 @@ section#main-home{
         flex: 2;
         @include media-breakpoint-up(md){
             flex: 0;
+            padding: 0 0 110px;
         }
         img{
             max-width: 156px;
