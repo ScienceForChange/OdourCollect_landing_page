@@ -921,6 +921,26 @@ html *:not(.no-animated):not(.slick-track):not(.slick-slide)::before {
 body {
   background-color: #FFF;
 }
+body main {
+  background-image: url("../assets/img/bg-r.svg"), url("../assets/img/bg-l.svg");
+  background-position: right -80dvw top 600px, left -100dvw top;
+  background-repeat: repeat-y, repeat-y;
+}
+@media (min-width: 768px) {
+  body main {
+    background-position: right -50dvw top 600px, left -50dvw top;
+  }
+}
+@media (min-width: 992px) {
+  body main {
+    background-position: right -40dvw top 600px, left -40dvw top;
+  }
+}
+@media (min-width: 1200px) {
+  body main {
+    background-position: right -25px top 600px, left -25px top;
+  }
+}
 
 .know-more {
   max-width: -moz-max-content;
