@@ -258,16 +258,16 @@ header{
                         }
                     }
                 }
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                }
             }
         }
     }
+    &:not(.home-header),
     &.scrolldown{
-        padding: 18px 30px;
         background-color: $white;
-        #logo{
-            height: 55px;
-            width: 112px;
-        }
         li{
             @include media-breakpoint-up(lg){
                 &:hover{
@@ -288,6 +288,16 @@ header{
                     }
                 }
             }
+        }
+    }
+    
+    &.scrolldown{
+
+        padding: 18px 30px;
+        background-color: $white;
+        #logo{
+            height: 55px;
+            width: 112px;
         }
     }
 }
