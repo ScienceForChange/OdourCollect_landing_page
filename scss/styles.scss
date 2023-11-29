@@ -12,7 +12,7 @@ html{
     overflow-x: hidden;
     &.opened{
         overflow-y: hidden;        
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             overflow-y: unset;
         }
     }
@@ -70,7 +70,6 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
         margin-top: -40px;
         margin-bottom: 20px;
         z-index: 2;
@@ -81,38 +80,51 @@ body{
         }
         button{
             padding: 0;
-            display: block;
-            height: 12px;
-            width: 12px;
-            background-color: $white;
-            border: 6px solid $black;
-            border-radius: 20px;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            border: none;
+            background-color: transparent;
             @include media-breakpoint-up(md){
-                border: 7px solid $black;
-                height: 14px;
-                width: 14px;
+                height: 30px;
+                width: 30px;
+            }
+            &:before{
+                content: "";
+                display: block;
+                height: 12px;
+                width: 12px;
+                background-color: $white;
+                border: 6px solid $black;
+                border-radius: 20px;
+                box-sizing: border-box;
+                @include media-breakpoint-up(md){
+                    border: 7px solid $black;
+                    height: 14px;
+                    width: 14px;
+                }
             }
             &:hover{
-                background-color: $white;
-                border: 2px solid $black;
-                @include media-breakpoint-up(md){
-                    height: 18px;
-                    width: 18px;
-                    
+                &:before{
+                    background-color: $white;
+                    border: 2px solid $black;
+                    @include media-breakpoint-up(md){
+                        height: 22px;
+                        width: 22px;
+                        
+                    }
                 }
             }
 
             &.tns-nav-active{
-                height: 18px;
-                width: 18px;
-                border: 9px solid $black;
-                @include media-breakpoint-up(md){
-                    height: 22px;
-                    width: 22px;
-                    border: 11px solid $black;
+                &:before{
+                    border: 9px solid $black;
+                    @include media-breakpoint-up(md){
+                        border: 11px solid $black;
+                    }
                 }
-
             }
         }
     }
