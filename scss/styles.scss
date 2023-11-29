@@ -12,7 +12,7 @@ html{
     overflow-x: hidden;
     &.opened{
         overflow-y: hidden;        
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             overflow-y: unset;
         }
     }

@@ -974,7 +974,7 @@ html {
 html.opened {
   overflow-y: hidden;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   html.opened {
     overflow-y: unset;
   }
