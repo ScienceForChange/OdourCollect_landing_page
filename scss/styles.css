@@ -273,9 +273,10 @@ header nav ul#main-menu {
   padding: 150px 30px 30px;
   width: 100dvw;
   height: 100dvh;
-  font-size: xx-large;
+  font-size: x-large;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: 100;
+  margin: 0;
 }
 @media (min-width: 992px) {
   header nav ul#main-menu {
@@ -296,35 +297,65 @@ header nav ul#main-menu {
 header nav ul#main-menu li {
   min-height: 35px;
   color: #191919;
-  padding: 10px 0;
+  padding: 10px 12px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 @media (min-width: 992px) {
-  header nav ul#main-menu li.submenu {
-    padding-right: 25px;
-    position: relative;
+  header nav ul#main-menu li {
+    padding: 10px 0;
+    margin-bottom: 0;
   }
+}
+header nav ul#main-menu li.submenu {
+  padding-right: 25px;
+  position: relative;
+}
+header nav ul#main-menu li.submenu::after, header nav ul#main-menu li.submenu::before {
+  content: "";
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-45deg);
+  background-color: #191919;
+  top: 22px;
+  width: 20px;
+  height: 1px;
+  right: 12px;
+}
+@media (min-width: 992px) {
   header nav ul#main-menu li.submenu::after, header nav ul#main-menu li.submenu::before {
-    content: "";
-    display: block;
-    position: absolute;
     top: 50%;
     width: 10px;
     height: 2px;
-    background-color: #191919;
-    z-index: 1;
-    right: 0px;
-    transform: rotate(-45deg);
+    right: 0;
   }
+}
+header nav ul#main-menu li.submenu::after {
+  right: 26px;
+  transform: rotate(45deg);
+}
+@media (min-width: 992px) {
   header nav ul#main-menu li.submenu::after {
-    right: 7px;
-    transform: rotate(45deg);
+    right: 6px;
   }
+}
+@media (min-width: 992px) {
   header nav ul#main-menu li.submenu:hover::after, header nav ul#main-menu li.submenu:hover::before {
     top: 70%;
   }
 }
+@media (max-width: 992px) {
+  header nav ul#main-menu li.submenu:hover::after {
+    transform: rotate(-45deg);
+  }
+  header nav ul#main-menu li.submenu:hover::before {
+    transform: rotate(45deg);
+  }
+}
 header nav ul#main-menu li.submenu ul {
+  min-width: calc(100% + 2px);
   list-style: none;
   overflow-y: hidden;
   max-height: 0;
@@ -333,14 +364,21 @@ header nav ul#main-menu li.submenu ul {
 }
 @media (min-width: 992px) {
   header nav ul#main-menu li.submenu ul {
-    padding: 15px 0 0 0;
+    padding: 8px 0 0 0;
     position: absolute;
-    right: 0;
+    right: -1px;
   }
 }
 header nav ul#main-menu li.submenu ul li {
+  padding: 20px 0 0;
+  margin: 0;
   min-width: -moz-max-content;
   min-width: max-content;
+  text-transform: none;
+  font-weight: 100;
+}
+header nav ul#main-menu li.submenu ul li:last-child {
+  padding-bottom: 30px;
 }
 @media (min-width: 992px) {
   header nav ul#main-menu li.submenu ul li {
@@ -356,6 +394,7 @@ header nav ul#main-menu li.submenu ul li {
   }
   header nav ul#main-menu li.submenu ul li:last-child {
     border-bottom: 1px solid #191919;
+    padding-bottom: 8px;
   }
 }
 header nav ul#main-menu li.submenu:hover ul {
@@ -364,6 +403,35 @@ header nav ul#main-menu li.submenu:hover ul {
 }
 header nav ul#main-menu li:hover {
   color: #FFF;
+}
+header nav ul#main-menu li#lang-menu {
+  margin-top: auto;
+}
+header nav ul#main-menu li#lang-menu::after {
+  transform: rotate(-45deg);
+}
+header nav ul#main-menu li#lang-menu::before {
+  transform: rotate(45deg);
+}
+header nav ul#main-menu li#lang-menu:hover::after {
+  transform: rotate(45deg);
+}
+header nav ul#main-menu li#lang-menu:hover::before {
+  transform: rotate(-45deg);
+}
+@media (min-width: 992px) {
+  header nav ul#main-menu li#lang-menu {
+    border: 1px solid #191919;
+    padding: 8px 35px 8px 15px;
+  }
+  header nav ul#main-menu li#lang-menu::after {
+    right: 16px;
+    transform: rotate(45deg);
+  }
+  header nav ul#main-menu li#lang-menu::before {
+    right: 10px;
+    transform: rotate(-45deg);
+  }
 }
 header.scrolldown {
   padding: 18px 30px;
@@ -976,7 +1044,6 @@ body main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   margin-top: -40px;
   margin-bottom: 20px;
   z-index: 2;
@@ -990,6 +1057,22 @@ body main {
 }
 .tns-outer .tns-nav button {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .tns-outer .tns-nav button {
+    height: 30px;
+    width: 30px;
+  }
+}
+.tns-outer .tns-nav button:before {
+  content: "";
   display: block;
   height: 12px;
   width: 12px;
@@ -999,31 +1082,27 @@ body main {
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  .tns-outer .tns-nav button {
+  .tns-outer .tns-nav button:before {
     border: 7px solid #191919;
     height: 14px;
     width: 14px;
   }
 }
-.tns-outer .tns-nav button:hover {
+.tns-outer .tns-nav button:hover:before {
   background-color: #FFF;
   border: 2px solid #191919;
 }
 @media (min-width: 768px) {
-  .tns-outer .tns-nav button:hover {
-    height: 18px;
-    width: 18px;
+  .tns-outer .tns-nav button:hover:before {
+    height: 22px;
+    width: 22px;
   }
 }
-.tns-outer .tns-nav button.tns-nav-active {
-  height: 18px;
-  width: 18px;
+.tns-outer .tns-nav button.tns-nav-active:before {
   border: 9px solid #191919;
 }
 @media (min-width: 768px) {
-  .tns-outer .tns-nav button.tns-nav-active {
-    height: 22px;
-    width: 22px;
+  .tns-outer .tns-nav button.tns-nav-active:before {
     border: 11px solid #191919;
   }
 }

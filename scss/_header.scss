@@ -84,7 +84,6 @@ header{
         &.opened{
             left: 0;
             width: 100dvw;
-            
             @include media-breakpoint-up(lg){
                 width: auto;
                 background-color: transparent;
@@ -98,9 +97,10 @@ header{
             padding: 150px 30px 30px;
             width: 100dvw;
             height: 100dvh;
-            font-size: xx-large;
+            font-size: x-large;
             text-transform: uppercase;
-            font-weight: bolder;
+            font-weight: 100;
+            margin: 0;
             @include media-breakpoint-up(lg){
                 width: max-content;
                 flex-direction: row;
@@ -117,49 +117,84 @@ header{
             li{
                 min-height: 35px;
                 color: $black;
-                padding: 10px 0;
+                padding: 10px 12px;
+                margin-bottom: 20px;
                 cursor: pointer;
+                @include media-breakpoint-up(lg){
+                    padding: 10px 0;
+                    margin-bottom: 0;
+                }
                 &.submenu{
-                    @include media-breakpoint-up(lg){
-                        padding-right: 25px;
-                        position: relative;
-                        &::after, 
-                        &::before{
-                            content: "";
-                            display: block;
-                            position: absolute;
+                    padding-right: 25px;
+                    position: relative;
+                    &::after, 
+                    &::before{
+                        content: "";
+                        border-radius: 5px;
+                        display: block;
+                        position: absolute;
+                        z-index: 1;
+                        transform: rotate(-45deg);
+                        background-color: $black;
+                        top: 22px;
+                        width: 20px;
+                        height: 1px;
+                        right: 12px;
+                        
+                        @include media-breakpoint-up(lg){
                             top: 50%;
                             width: 10px;
                             height: 2px;
-                            background-color: $black;
-                            z-index: 1;
-                            right: 0px;
-                            transform: rotate(-45deg) ;
+                            right: 0;
                         }
-                        &::after{
-                            right: 7px;
-                            transform: rotate(45deg) ;
+                    }
+                    &::after{
+                        right: 26px;
+                        transform: rotate(45deg) ;
+                        @include media-breakpoint-up(lg){
+                            right: 6px;
                         }
-                        &:hover{
+                    }
+                    &:hover{
+
+                        @include media-breakpoint-up(lg){
                             &::after, 
                             &::before{
                                 top: 70%;
                             }
                         }
+                        
+                        @include media-breakpoint-down(lg){
+                            &::after{
+                                transform: rotate(-45deg) ;
+                            }
+                            &::before{
+                                transform: rotate(45deg) ;
+                            }
+                        }
+                        
                     }
                     ul{
+                        min-width: calc(100% + 2px);
                         list-style: none;
                         overflow-y: hidden;
                         max-height: 0;
                         padding: 0 30px;
                         font-weight: normal;    
                         @include media-breakpoint-up(lg){
-                            padding: 15px 0 0 0;
+                            padding: 8px 0 0 0;
                             position: absolute;
-                            right: 0;
+                            right: -1px;
                         }
                         li{
+                            padding: 20px 0 0;
+                            margin: 0;
                             min-width: max-content;
+                            text-transform: none;
+                            font-weight: 100;
+                            &:last-child{
+                                padding-bottom: 30px;
+                            }
                             @include media-breakpoint-up(lg){
                                 padding: 8px 10px;
                                 border-width: 1px 1px 0 1px;
@@ -172,6 +207,7 @@ header{
                                 }
                                 &:last-child{
                                     border-bottom: 1px solid $black;
+                                    padding-bottom: 8px;
                                 }
                             }
                         }
@@ -183,6 +219,44 @@ header{
                 }
                 &:hover{
                     color: $white;
+                }
+                &#lang-menu{
+                    margin-top: auto;
+                    
+                    &::after{
+                            
+                        transform: rotate(-45deg) ;
+                    } 
+                    &::before{
+
+                        transform: rotate(45deg) ;
+                    }
+                    &:hover{
+                        
+                        &::after{
+                                
+                            transform: rotate(45deg) ;
+                        } 
+                        &::before{
+
+                            transform: rotate(-45deg) ;
+                        }
+                    }
+                    @include media-breakpoint-up(lg){
+                        border: 1px solid $black;
+                        padding: 8px 35px 8px 15px;
+                        
+                        &::after{
+                            
+                            right: 16px;
+                            transform: rotate(45deg) ;
+                        } 
+                        &::before{
+
+                            right: 10px;
+                            transform: rotate(-45deg) ;
+                        }
+                    }
                 }
             }
         }
