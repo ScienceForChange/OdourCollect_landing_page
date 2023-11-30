@@ -544,7 +544,7 @@ section#main-home {
   height: max-content;
   max-height: 1050px;
   background-color: #ff6200;
-  background-image: url("/assets/img/bg-main.jpg");
+  background-image: url("/assets/img/home/bg-main.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -582,7 +582,7 @@ section#main-home .text img#android-app {
 }
 section#main-home .app {
   flex: 1;
-  background-image: url("/assets/img/app.png");
+  background-image: url("/assets/img/home/app.png");
   background-position: top right -90%;
   background-size: 80%;
   background-repeat: no-repeat;
@@ -623,7 +623,7 @@ section#about-home .content .text {
   padding: 0;
 }
 section#about-home .content .photo {
-  background-image: url("/assets/img/about-photo.jpg");
+  background-image: url("/assets/img/home/about-photo.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
