@@ -1,7 +1,7 @@
 <header class="d-flex justify-content-between align-items-center {{ $currentUrl == LaravelLocalization::getURLFromRouteNameTranslated(App::currentLocale(), '/') ? 'home-header' : '' }} ">
         <div class="container-xl d-flex justify-content-between align-items-center">
             <a href="/" id="logo"></a>
-            <button id="burger" onclick="toggleMenu()" class="d-flex d-lg-none flex-column justify-content-between">
+            <button id="burger" class="d-flex d-lg-none flex-column justify-content-between">
                 <span></span>
             </button>
             <nav id="menu">
