@@ -6,7 +6,7 @@ const menu = document.getElementById('menu');
 const header = document.getElementsByTagName('header')[0];
 const html = document.documentElement;
 function toggleMenu(){
-    alert('test');
+    
     if(burger.classList.contains('opened')){
         burger.classList.remove('opened');
         menu.classList.remove('opened');
@@ -22,6 +22,7 @@ onscroll = () => {
     window.scrollY > 0 ? header.classList.add('scrolldown') :  header.classList.remove('scrolldown') ;
 };
 onload = () =>{
+    burger.addEventListener('click', toggleMenu);
     window.scrollY > 0 ? header.classList.add('scrolldown') :  header.classList.remove('scrolldown') ;
     tns({
         container: '.user-reviews-gallery',

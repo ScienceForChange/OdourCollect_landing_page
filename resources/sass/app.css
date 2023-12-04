@@ -13169,12 +13169,6 @@ html.opened {
   }
 }
 
-html *:not(.no-animated):not(.slick-track):not(.slick-slide),
-html *:not(.no-animated):not(.slick-track):not(.slick-slide)::after,
-html *:not(.no-animated):not(.slick-track):not(.slick-slide)::before {
-  transition: all 0.15s ease-out;
-}
-
 body {
   background-color: #FFF;
 }
