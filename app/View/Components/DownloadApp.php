@@ -5,9 +5,8 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-class Header extends Component
+class DownloadApp extends Component
 {
     /**
      * Create a new component instance.
@@ -22,7 +21,6 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        $localizations = LaravelLocalization::getSupportedLocales();
-        return view('components.header')->with('localizations', $localizations)->with('currentUrl', Url()->current());
+        return view('components.download-app');
     }
 }

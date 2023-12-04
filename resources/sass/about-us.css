@@ -1,0 +1,123 @@
+#main-about-us {
+  background-color: #dfc4f2;
+  padding: 120px 0 30px 0;
+}
+@media (min-width: 992px) {
+  #main-about-us {
+    padding: 250px 0 100px 0;
+  }
+}
+#main-about-us .custom-container {
+  max-width: 866px;
+}
+
+#cards {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+@media (min-width: 992px) {
+  #cards {
+    padding-top: 228px;
+    padding-bottom: 245px;
+  }
+}
+#cards .custom-container {
+  gap: 55px;
+}
+@media (min-width: 992px) {
+  #cards .custom-container {
+    gap: 138px;
+  }
+}
+#cards .custom-container .card {
+  flex: 1;
+  max-width: 492px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 98, 0, 0.4);
+  padding: 28px 34px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  #cards .custom-container .card {
+    padding: 40px 40px 50px 40px;
+  }
+}
+#cards .custom-container .card img {
+  max-width: 82px;
+  margin-bottom: 10px;
+}
+#cards .custom-container .card .card-title {
+  font-family: Space Grotesk;
+  font-size: 37.367px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 136%;
+}
+#cards .custom-container .card .card-text {
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.5%;
+}
+
+#our-values {
+  background-color: #daf299;
+  padding: 50px 0 100px 0;
+}
+@media (min-width: 992px) {
+  #our-values {
+    padding: 50px 0 200px 0;
+  }
+}
+#our-values .custom-container {
+  max-width: 866px;
+}
+#our-values ul {
+  list-style: none;
+  padding-left: 25px;
+}
+@media (min-width: 992px) {
+  #our-values ul {
+    padding-left: 32px;
+  }
+}
+#our-values ul li {
+  position: relative;
+}
+#our-values ul li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: #191919;
+  border-radius: 50%;
+  left: -25px;
+  top: 8px;
+}
+@media (min-width: 992px) {
+  #our-values ul li::before {
+    height: 15px;
+    width: 15px;
+    left: -30px;
+  }
+}
+#our-values ul li p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%;
+}
+#our-values ul li p b {
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  #our-values ul li p {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 136%;
+  }
+}/*# sourceMappingURL=about-us.css.map */
