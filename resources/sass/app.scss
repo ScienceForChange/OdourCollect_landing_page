@@ -1,0 +1,138 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'mixins';
+@import 'colors';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+@import 'buttons';
+
+@import 'home';
+@import 'about-us';
+@import 'blog';
+
+
+html{
+    overflow-x: hidden;
+    &.opened{
+        overflow-y: hidden;        
+        @include media-breakpoint-up(lg){
+            overflow-y: unset;
+        }
+    }
+}
+html *:not(.no-animated):not(.slick-track):not(.slick-slide),
+html *:not(.no-animated):not(.slick-track):not(.slick-slide)::after,
+html *:not(.no-animated):not(.slick-track):not(.slick-slide)::before {
+    transition: all .15s ease-out;
+}
+body{
+    background-color: $white;
+    main{
+        min-height: 100vh;
+        background-image: url('../assets/img/bg-r.svg'),  url('../assets/img/bg-l.svg');
+        background-position: right -80dvw top 600px, left -100dvw top;
+        background-repeat: repeat-y, repeat-y;
+        @include media-breakpoint-up(md){
+            background-position: right -50dvw top 600px, left -50dvw top;
+        }
+        @include media-breakpoint-up(lg){
+            background-position: right -40dvw top 600px, left -40dvw top;
+        }
+        @include media-breakpoint-up(xl){
+            background-position: right -25px top 600px, left -25px top;
+        }
+    }
+}
+.know-more{
+    max-width: max-content;
+    display: inline-flex;
+    font-family: Space Grotesk;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $black;
+    text-decoration: none;
+    gap: 5px;
+    &:hover{
+        text-decoration: underline;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        gap: 15px;
+    }
+}
+.tns-outer{
+    position: relative;
+    .tns-ovh{
+        z-index: 1;
+    }
+    .tns-nav{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -40px;
+        margin-bottom: 20px;
+        z-index: 2;
+        height: 22px;
+        @include media-breakpoint-up(md){
+            margin-top: -80px;
+            margin-bottom: 60px;
+        }
+        button{
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            border: none;
+            background-color: transparent;
+            @include media-breakpoint-up(md){
+                height: 30px;
+                width: 30px;
+            }
+            &:before{
+                content: "";
+                display: block;
+                height: 12px;
+                width: 12px;
+                background-color: $white;
+                border: 6px solid $black;
+                border-radius: 20px;
+                box-sizing: border-box;
+                @include media-breakpoint-up(md){
+                    border: 7px solid $black;
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+            &:hover{
+                &:before{
+                    background-color: $white;
+                    border: 2px solid $black;
+                    @include media-breakpoint-up(md){
+                        height: 22px;
+                        width: 22px;
+                        
+                    }
+                }
+            }
+
+            &.tns-nav-active{
+                &:before{
+                    border: 9px solid $black;
+                    @include media-breakpoint-up(md){
+                        border: 11px solid $black;
+                    }
+                }
+            }
+        }
+    }
+}
+.custom-container {
+    @include make-container(xl);
+}

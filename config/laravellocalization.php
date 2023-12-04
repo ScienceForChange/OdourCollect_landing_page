@@ -1,11 +1,14 @@
 <?php
 
 return [
-
+    
     // Uncomment the languages that your site supports - or add new ones.
     // These are sorted by the native name, which is the order you might show them in a language selector.
     // Regional languages are sorted by their base language, so "British English" sorts as "English, British"
     'supportedLocales' => [
+        'en'          => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'regional' => 'en_GB'],
+        'es'          => ['name' => 'Spanish',                'script' => 'Latn', 'native' => 'castellano', 'regional' => 'es_ES'],
+        'ca'          => ['name' => 'Catalan',                'script' => 'Latn', 'native' => 'català', 'regional' => 'ca_ES'],
         //'ace'         => ['name' => 'Achinese',               'script' => 'Latn', 'native' => 'Aceh', 'regional' => ''],
         //'af'          => ['name' => 'Afrikaans',              'script' => 'Latn', 'native' => 'Afrikaans', 'regional' => 'af_ZA'],
         //'agq'         => ['name' => 'Aghem',                  'script' => 'Latn', 'native' => 'Aghem', 'regional' => ''],
@@ -26,7 +29,6 @@ return [
         //'nb'          => ['name' => 'Norwegian Bokmål',       'script' => 'Latn', 'native' => 'Bokmål', 'regional' => 'nb_NO'],
         //'bs'          => ['name' => 'Bosnian',                'script' => 'Latn', 'native' => 'bosanski', 'regional' => 'bs_BA'],
         //'br'          => ['name' => 'Breton',                 'script' => 'Latn', 'native' => 'brezhoneg', 'regional' => 'br_FR'],
-        //'ca'          => ['name' => 'Catalan',                'script' => 'Latn', 'native' => 'català', 'regional' => 'ca_ES'],
         //'ch'          => ['name' => 'Chamorro',               'script' => 'Latn', 'native' => 'Chamoru', 'regional' => ''],
         //'ny'          => ['name' => 'Chewa',                  'script' => 'Latn', 'native' => 'chiCheŵa', 'regional' => ''],
         //'kde'         => ['name' => 'Makonde',                'script' => 'Latn', 'native' => 'Chimakonde', 'regional' => ''],
@@ -42,12 +44,10 @@ return [
         //'et'          => ['name' => 'Estonian',               'script' => 'Latn', 'native' => 'eesti', 'regional' => 'et_EE'],
         //'na'          => ['name' => 'Nauru',                  'script' => 'Latn', 'native' => 'Ekakairũ Naoero', 'regional' => ''],
         //'guz'         => ['name' => 'Ekegusii',               'script' => 'Latn', 'native' => 'Ekegusii', 'regional' => ''],
-        'en'          => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'regional' => 'en_GB'],
         //'en-AU'       => ['name' => 'Australian English',     'script' => 'Latn', 'native' => 'Australian English', 'regional' => 'en_AU'],
         //'en-GB'       => ['name' => 'British English',        'script' => 'Latn', 'native' => 'British English', 'regional' => 'en_GB'],
         //'en-CA'       => ['name' => 'Canadian English',       'script' => 'Latn', 'native' => 'Canadian English', 'regional' => 'en_CA'],
         //'en-US'       => ['name' => 'U.S. English',           'script' => 'Latn', 'native' => 'U.S. English', 'regional' => 'en_US'],
-        'es'          => ['name' => 'Spanish',                'script' => 'Latn', 'native' => 'español', 'regional' => 'es_ES'],
         //'eo'          => ['name' => 'Esperanto',              'script' => 'Latn', 'native' => 'esperanto', 'regional' => ''],
         //'eu'          => ['name' => 'Basque',                 'script' => 'Latn', 'native' => 'euskara', 'regional' => 'eu_ES'],
         //'ewo'         => ['name' => 'Ewondo',                 'script' => 'Latn', 'native' => 'ewondo', 'regional' => ''],

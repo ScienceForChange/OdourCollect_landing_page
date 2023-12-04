@@ -1,0 +1,46 @@
+// Definir los breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+// Mixin para los breakpoints hacia arriba (min-width)
+@mixin media-breakpoint-up($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Mixin para los breakpoints hacia abajo (max-width)
+@mixin media-breakpoint-down($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Mixin para los breakpoints entre dos puntos (min-width y max-width)
+@mixin media-breakpoint-between($lower, $upper) {
+  @media (min-width: map-get($breakpoints, $lower)) and (max-width: map-get($breakpoints, $upper)) {
+    @content;
+  }
+}
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+// Source mixin
+@mixin make-container($container-max-width) {
+    max-width:  map-get($container-max-widths, $container-max-width)  ;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 38px;
+}
+  
+  
