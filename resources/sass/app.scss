@@ -29,7 +29,7 @@ body{
     background-color: $white;
     main{
         min-height: 100vh;
-        background-image: url('../assets/img/bg-r.svg'),  url('../assets/img/bg-l.svg');
+        background-image: url('/assets/img/bg-r.svg'),  url('/assets/img/bg-l.svg');
         background-position: right -80dvw top 600px, left -100dvw top;
         background-repeat: repeat-y, repeat-y;
         @include media-breakpoint-up(md){

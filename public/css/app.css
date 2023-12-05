@@ -1,12 +1,12 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12157,7 +12157,7 @@ header {
 header #logo {
   height: 55px;
   width: 112px;
-  background-image: url("../../public/assets/img/logo.svg");
+  background-image: url(/images/logo.svg?3c435ae9f28a042717f5cf51d61d235d);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -13303,4 +13303,4 @@ body main {
   margin-right: auto;
   margin-left: auto;
   padding: 0 38px;
-}/*# sourceMappingURL=app.css.map */
+}
