@@ -12900,25 +12900,24 @@ section#services-home .services .service h4, section#services-home .services .se
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ff8133;
+  background-color: #FFA36A;
   height: 250px;
   width: 250px;
-  border-radius: 6px;
+  border-radius: 30px;
   gap: 10px;
   margin-bottom: 70px;
 }
 .app-stats .app-stats-container .app-stats-gallery .tns-item .slide h6, .app-stats .app-stats-container .app-stats-gallery .tns-item .slide .h6 {
   text-align: center;
-  font-family: Inter;
-  font-size: 16px;
+  font-family: Space Grotesk;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
 }
-.app-stats .app-stats-container .app-stats-gallery .tns-item .slide span {
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
+.app-stats .app-stats-container .app-stats-gallery .tns-item .slide p {
+  font-family: Space Grotesk;
+  font-size: 22px;
   font-style: normal;
   font-weight: 500;
   line-height: 0px; /* 0% */
